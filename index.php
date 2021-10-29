@@ -25,7 +25,6 @@ try {
     $controller->{$method_name}();
 
 } catch (ErrorException $exception) {
-    var_dump($exception->getMessage());
     header("HTTP/1.1 404 Not Found");
     exit();
 }

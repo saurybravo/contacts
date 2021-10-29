@@ -17,7 +17,9 @@ class ContactController extends Controller
 
     public function index()
     {
-        $data = ($this->contact_model->all(['*'], ['contact_numbers']));
+        $fields = (isset($_GET['fields'])) ? explode(',', $_GET['fields']) : ['*'];
+        $relations = (isset($_GET['relations'])) ? explode(',', $_GET['relations']) : [];
+        $data = ($this->contact_model->all($fields, $relations));
         $this->response($data, 200);
     }
 

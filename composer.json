@@ -1,0 +1,20 @@
+{
+  "name": "saurybravo/contacts",
+  "description": "Registro de contractos",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "saurybravo",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "illuminate/collections": "^8.68"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}
